@@ -1,5 +1,5 @@
 {
-  "name": "demo-configs",
+  "name": "demo-nx-configs",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/demo-configs/src",
   "projectType": "library",
