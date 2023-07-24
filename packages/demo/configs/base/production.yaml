@@ -1,0 +1,11 @@
+key: 9876543
+apiUrl: https://production-config.testing
+serviceNames: 
+  - prodServiceOne
+  - prodServiceTwo
+  - prodServiceThree
+  - prodServiceFour
+serverConfigs:
+  host: oneoneone.one
+  protocol: https
+  path: twotwo

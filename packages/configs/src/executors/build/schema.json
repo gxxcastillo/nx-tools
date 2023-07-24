@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "version": 2,
+  "title": "Build executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "appName": {
+      "type": "string",
+      "description": "The app you are building the configs for"
+    },
+    "buildMode": {
+      "type": "string",
+      "description": "Can be 'production' or 'development'"
+    },
+    "tsConfig": {
+      "type": "string",
+      "description": "the tsConfig file"
+    },
+    "outputPath": {
+      "type": "string",
+      "description": "The place where the configs are written to"
+    },
+    "watch": {
+      "type": "boolean",
+      "description": "whether to watch for changes"
+    }
+  },
+  "required": []
+}

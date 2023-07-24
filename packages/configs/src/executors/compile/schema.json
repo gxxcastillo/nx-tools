@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "version": 2,
+  "title": "Compile executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "appName": {
+      "type": "string",
+      "description": "The app you are building the configs for."
+    },
+    "buildMode": {
+      "type": "string",
+      "description": "Can be 'production' or 'development'"
+    }
+  },
+  "required": ["appName"]
+}

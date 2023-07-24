@@ -1,0 +1,11 @@
+key: 123456
+apiUrl: https://development-config.testing
+serviceNames: 
+  - devServiceOne
+  - devServiceTwo
+  - devServiceThree
+  - devServiceFour
+serverConfigs:
+  host: oneoneone.one
+  protocol: https
+  path: twotwo

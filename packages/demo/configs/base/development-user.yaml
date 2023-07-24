@@ -1,0 +1,11 @@
+key: 123456
+apiUrl: https://testing-config.testing
+serviceNames: 
+  - serviceOne
+  - serviceTwo
+  - serviceThree
+  - serviceFour
+serverConfigs:
+  host: oneoneone.one.user
+  protocol: https
+  path: twotwo/user

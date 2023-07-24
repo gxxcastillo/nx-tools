@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@gxxc/demo-configs": ["packages/demo-configs/src/index.ts"],
+      "@gxxc/nx-configs": ["packages/configs/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
