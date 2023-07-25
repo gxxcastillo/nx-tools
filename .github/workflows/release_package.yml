@@ -1,0 +1,49 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version: <newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease'
+        required: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout project repository
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Setup pnpm (must be setup before setup-node but gets installed after)
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+          run_install: false
+
+      # Setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          registry-url: https://registry.npmjs.org/
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: pnpm install
+          
+      # Run Tests
+      - name: Run tests
+        run: pnpm nx test nx-configs
+
+      # Configure Git
+      - name: Git configuration
+        run: |
+          git config --global user.email "56467543+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions"
+
+      # Increment Version
+      - name: Increment Semantic Version
+        run: cd packages/configs && pnpm version ${{ github.event.inputs.version }} && git commit -m 'bump'

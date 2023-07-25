@@ -9,6 +9,8 @@
   },
   "executors": "./executors.json",
   "dependencies": {
+    "@nx/devkit": "16.5.5",
+    "@nx/js": "16.5.5",
     "change-case": "^4.1.2",
     "js-yaml": "^4.1.0",
     "nconf": "^0.12.0"

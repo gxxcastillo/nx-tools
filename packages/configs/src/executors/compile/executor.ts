@@ -1,11 +1,10 @@
 import { writeFileSync } from 'node:fs';
+import { ExecutorContext } from '@nx/devkit';
 import * as nconf from 'nconf';
-// import l from 'nconf-yaml'
 import { dump, load } from 'js-yaml';
 import { camelCase } from 'change-case';
 
 import { CompileExecutorSchema } from './schema';
-import { ExecutorContext } from '@nx/devkit';
 
 const allowlistedEnvKeys = [];
 
